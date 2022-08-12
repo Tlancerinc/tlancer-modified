@@ -17,7 +17,7 @@ const TutorPage = () => {
       <Divider />
       <ParentLearnMore />
       <ParentSelfService />
-      <NewCourses />
+      <NewCourses heading="New Courses" />
       <Divider />
       <TlancerCommunity />
       <Divider />

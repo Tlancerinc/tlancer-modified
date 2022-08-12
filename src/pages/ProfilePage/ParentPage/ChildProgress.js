@@ -1,17 +1,16 @@
-import { Link } from "react-router-dom";
-import parentHero from "../../../images/Parents/parent_hero.webp";
+import parent_img from "../../../images/Parents/people.webp";
 import JoinRightWrapper from "../../JoinPages/JoinRightWrapper";
-const ParentHero = () => {
+const ParentLearnMore = () => {
   const submitHandler = (e) => {
     console.log("button clicked :)");
   };
   return (
     <>
       <style>{`
-        #parent-section {
+        #parent-learn-more-section {
             color: #00274C;
         }
-        #parent-section p {
+        #parent-learn-more-section p {
             font-family: 'Work Sans', san-serif;
             font-weight: 400;
             color: #6C757D;
@@ -30,29 +29,32 @@ const ParentHero = () => {
              border-color:var(--active-link);
         }
       `}</style>
-      <section id="parent-section" className="container-fluid p-5">
-        <div className="container d-flex flex-column-reverse flex-md-row align-items-center p-lg-5">
-          <div className="col col-md-7 pe-md-5 text-center text-lg-start mt-lg-5">
-            <h1 className="tutor-heading fw-500 display-4">
-              See how your child grade is doing.{" "}
-              <span className="tutor-accent display-4">
-                Signup as a parent.
-              </span>
-            </h1>
+      <section id="parent-learn-more-section" className="container-fluid">
+        <div className="container d-flex flex-column flex-lg-row align-items-center py-5 pt-lg-0 mb-5">
+          <div className="col col-lg-5 pe-lg-5">
+            <JoinRightWrapper id="people-img" src={parent_img} alt="people" />
+          </div>
+          <div className="col col-lg-7 pe-lg-5 text-center text-lg-start mt-5 ">
+            <h2 className="tutor-heading fw-500 display-4">
+              We connect students with the best tutors across the world to help
+              them learn.
+            </h2>
             <p className="my-4 h4">
-              Hackton is the leading online coding tutor for beginners join us
-              today to take a step further.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing
+              elit consectetur Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit elit consectetur ipsum dolor sit amet, consectetur
+              adipiscing elit adipiscing elit consectetur
             </p>
-            <Link
-              to={"/parent/parent-logged-in"}
-              className="btn-get-started btn btn-lg mt-5 me-auto ms-lg-0"
+            <button
+              onClick={(e) => submitHandler(e)}
+              className="btn-get-started btn btn-lg mt-5 mx-auto ms-lg-0 text-nowrap"
             >
-              Get Started{" "}
+              Learn more about us{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fillRull="currentColor"
+                fill="currentColor"
                 className="bi bi-arrow-down ms-5"
                 viewBox="0 0 16 16"
                 style={{ transform: "rotate(-90deg)" }}
@@ -62,18 +64,11 @@ const ParentHero = () => {
                   d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
                 />
               </svg>
-            </Link>
-          </div>
-          <div className="col col-md-5 ps-md-5">
-            <JoinRightWrapper
-              id="parent-hero-img"
-              src={parentHero}
-              alt="woman and child"
-            />
+            </button>
           </div>
         </div>
       </section>
     </>
   );
 };
-export default ParentHero;
+export default ParentLearnMore;

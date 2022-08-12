@@ -2,6 +2,9 @@
 :root {
   --dark-blue: #00274c;
   --active-link: #0ebe6a;
+  --body-grey: #6C757D;
+  --grey-5: #9CA3AF;
+  --product-dark-blue: #00274C;
 }
 *, ::after, ::before {
   box-sizing: border-box;
@@ -9,6 +12,10 @@
 
 .form-control {
   background-color: rgba(0,39,76,0.03);
+}
+
+.ubuntu {
+  font-family: 'Ubuntu', san-serif;
 }
 
 
@@ -114,6 +121,12 @@
   color: #808080;
 }
 
+.new-course-progress-heading {
+  color: var(--grey-5);
+}
+
+
+
 .fade-in {
   animation: fade-in .3s linear forwards;
 }
@@ -130,20 +143,12 @@
 
 /* * { border: 1px solid red} */
 
-/* @media (max-width: 1024px) {
-  .home-logo {
-    width: 100%;
-    height: 100%;
-  }
-} */
+
 
 
 @media (max-width: 768px) {
   .registration-input {
     width: 100%!important;
   }
-  /* .home-logo {
-    width: 115px;
-    height: 34px;
-  } */
+  
 }

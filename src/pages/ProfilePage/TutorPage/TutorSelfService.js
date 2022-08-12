@@ -110,7 +110,7 @@ const TutorSelfService = (props) => {
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body pt-0 ps-0">
+                    <div className="accordion-body pt-0 ps-0">
                       <p className="service-text text-lg-start">
                         Hackton is the leading online coding tutor for beginners
                         join us today to take a step further.

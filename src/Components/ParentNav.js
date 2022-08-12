@@ -87,7 +87,7 @@ const TutorNav = () => {
                   width={"374"}
                   height={"90"}
                 />
-                <span className="tutors-sup h4 mx-2">tutors</span>
+                <span className="tutors-sup h4 mx-2">parent</span>
               </Link>
 
               <button
@@ -107,7 +107,7 @@ const TutorNav = () => {
               <ul className="navbar-nav m-auto mb-2 mb-lg-0 text-center">
                 <li className="nav-item">
                   <Link
-                    to={"/tutor"}
+                    to={"/parent"}
                     className="nav-link text-nowrap"
                     aria-current="page"
                   >
@@ -116,16 +116,25 @@ const TutorNav = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to={"/tutor/courses"}
+                    to={"/parent/tutor"}
                     className="nav-link text-nowrap"
                     aria-current="page"
                   >
-                    Courses
+                    Tutor
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    to={"/tutor/attendance"}
+                    to={"/parent/Task"}
+                    className="nav-link text-nowrap"
+                    aria-current="page"
+                  >
+                    Task
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to={"/parent/attendance"}
                     className="nav-link text-nowrap"
                     aria-current="page"
                   >
@@ -134,48 +143,29 @@ const TutorNav = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to={"/tutor/students"}
-                    className="nav-link text-nowrap"
-                    aria-current="page"
-                  >
-                    Students
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to={"/tutor/sales"}
-                    className="nav-link text-nowrap"
-                    aria-current="page"
-                  >
-                    Sales
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to={"/tutor/analytics"}
-                    className="nav-link text-nowrap"
-                    aria-current="page"
-                  >
-                    Analytics
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to={"/tutor/assignments"}
+                    to={"/parent/assignments"}
                     className="nav-link text-nowrap"
                     aria-current="page"
                   >
                     Assignments
                   </Link>
                 </li>
-                <li></li>
+                <li className="nav-item">
+                  <Link
+                    to={"/parent/orders"}
+                    className="nav-link text-nowrap"
+                    aria-current="page"
+                  >
+                    Orders
+                  </Link>
+                </li>
               </ul>
-              <div className="d-flex align-items-center justify-content-center my-5 my-lg-0 ms-auto ms-lg-4">
+              <div className="d-flex align-items-center justify-content-center my-5 my-lg-0 ms-auto ms-lg-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fillRule="currentColor"
+                  fill="currentColor"
                   className="me-3 bi bi-calendar"
                   viewBox="0 0 16 16"
                 >
@@ -185,7 +175,7 @@ const TutorNav = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fillRule="currentColor"
+                  fill="currentColor"
                   className="me-3 bi bi-chat-left-dots"
                   viewBox="0 0 16 16"
                 >
@@ -196,7 +186,7 @@ const TutorNav = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fillRule="currentColor"
+                  fill="currentColor"
                   className="me-3 bi bi-bag"
                   viewBox="0 0 16 16"
                 >
@@ -206,13 +196,13 @@ const TutorNav = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fillRule="currentColor"
+                  fill="currentColor"
                   className="me-3 bi bi-person-circle"
                   viewBox="0 0 16 16"
                 >
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                   <path
-                    fillRule="evenodd"
+                    fill-rule="evenodd"
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                   />
                 </svg>

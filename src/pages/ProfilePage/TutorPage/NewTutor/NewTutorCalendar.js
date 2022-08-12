@@ -40,7 +40,7 @@ const NewTutorCalendar = () => {
                 9:30 am
               </div>
             </div>
-            <div className="add-course-container container text-center p-lg-5">
+            <div className="add-course-container container text-center p-5">
               <p className="account-heading fw-bold">No class on this date</p>
               <button className="btn btn-new-course btn-lg fw-bold h5">
                 + Add new course

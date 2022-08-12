@@ -16,7 +16,7 @@ const TutorNoCourses = () => {
           </h2>
         </div>
 
-        <div className="container text-center p-lg-5 my-5">
+        <div className="container text-center p-5 my-5">
           <Link
             to={"/tutor/course-details"}
             className="btn btn-new-course btn-lg fw-bold h5"

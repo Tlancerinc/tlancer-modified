@@ -1,4 +1,4 @@
-import NewCourseCard from "./NewCourseCard";
+import AssesmentCourseCard from "./AssesmentCourseCard";
 import new1 from "../../images/New Courses/new1.png";
 import new2 from "../../images/New Courses/new2.png";
 import new3 from "../../images/New Courses/new3.png";
@@ -8,30 +8,31 @@ import avatar2 from "../../images/New Courses/avatar2.png";
 import avatar3 from "../../images/New Courses/avatar3.png";
 import avatar4 from "../../images/New Courses/avatar4.png";
 
-const NewCourses = (props) => {
+// import completed_icon from "../../images/AssesmentCourses/completed_icon.png";
+// import failed_icon from "../../images/AssesmentCourses/failed_icon.png";
+// import pending_icon from "../../images/AssesmentCourses/pending_icon.png";
+// import score_icon from "../../images/AssesmentCourses/score_icon.png";
+
+const AssesmentCourses = (props) => {
   return (
     <>
       <style>{`
       #new-courses-section {
         background: ${props.bgColor};
       }
-
     #new-courses-section h2 {
         font-family: 'Ubuntu', san-serif;
     }
-
     .new-courses-btn {
         background: none;
         border: none;
         font-family: 'Work Sans', sans-serif;
         font-weight: 500;
     }
-
     #new-courses-arrow {
         transform: rotate(235deg);
         margin-left: 0.25rem;
     }
-
     @media (max-width: 768px) {
       .new-courses-btn {
         display: none;
@@ -43,7 +44,7 @@ const NewCourses = (props) => {
           <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between mt-5 my-md-5">
             <h2 className="h4 fw-bold my-5">{props.heading}</h2>
             <button className="new-courses-btn h5">
-              See all
+              Go to Assesment Page
               <svg
                 id="new-courses-arrow"
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,41 +62,43 @@ const NewCourses = (props) => {
             </button>
           </div>
           <div className="row justify-content-center">
-            <NewCourseCard
-              src={new1}
-              alt="instructor"
-              courseTitle="User Research Pro-Level Course for Beginner"
-              instructorImg={avatar1}
-              instructorName="Nicole Savana"
-              price="$15.99"
-              priceBefore="$25.99"
-            />
-            <NewCourseCard
-              src={new2}
-              alt="instructor"
-              courseTitle="Senior Level General Chemistry Course"
-              instructorImg={avatar2}
-              instructorName="Fiona Garbson"
-              price="$15.99"
-              priceBefore="$25.99"
-            />
-            <NewCourseCard
-              src={new3}
-              alt="instructor"
-              courseTitle="Geometry from Beginner to Senior Level"
-              instructorImg={avatar3}
-              instructorName="Anina David"
-              price="$15.99"
-              priceBefore="$25.99"
-            />
-            <NewCourseCard
+            <AssesmentCourseCard
               src={new4}
-              alt="instructor"
               courseTitle="Geometry from Beginner to Senior Level"
               instructorImg={avatar4}
               instructorName="Wade Warren"
-              price="$15.99"
-              priceBefore="$25.99"
+              assesmentProgress="Pending"
+              score="0"
+              assesmentAction="Complete Assesment"
+            />
+            <AssesmentCourseCard
+              src={new1}
+              courseTitle="User Experience Design foundation intro Assesment"
+              instructorImg={avatar1}
+              instructorName="Nicole Savana"
+              assesmentProgress="Completed"
+              score="10"
+              assesmentAction="View Assesment"
+            />
+
+            <AssesmentCourseCard
+              src={new3}
+              courseTitle="Mathematic - Equation Assessment 2"
+              instructorImg={avatar3}
+              instructorName="Anina David"
+              assesmentProgress="Failed"
+              score="0"
+              assesmentAction="Retake Assesment"
+            />
+
+            <AssesmentCourseCard
+              src={new3}
+              courseTitle="Mathematic - Equation Assessment 2"
+              instructorImg={avatar3}
+              instructorName="Anina David"
+              assesmentProgress="Failed"
+              score="0"
+              assesmentAction="Retake Assesment"
             />
           </div>
         </div>
@@ -103,4 +106,4 @@ const NewCourses = (props) => {
     </>
   );
 };
-export default NewCourses;
+export default AssesmentCourses;

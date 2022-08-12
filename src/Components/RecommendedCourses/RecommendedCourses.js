@@ -3,8 +3,9 @@ import adams from "../../images/Recommended/adams.png";
 import recommend1 from "../../images/Recommended/recommend1.png";
 import recommend2 from "../../images/Recommended/recommend2.png";
 import recommend3 from "../../images/Recommended/recommend3.png";
+import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
-const RecommendedCourses = () => {
+const RecommendedCourses = (props) => {
   return (
     <>
       <style>{`
