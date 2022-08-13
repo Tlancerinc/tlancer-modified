@@ -1,10 +1,10 @@
 import AssesmentCourseCard from "./AssesmentCourseCard";
 import new1 from "../../images/New Courses/new1.png";
-import new2 from "../../images/New Courses/new2.png";
+// import new2 from "../../images/New Courses/new2.png";
 import new3 from "../../images/New Courses/new3.png";
 import new4 from "../../images/New Courses/new4.png";
 import avatar1 from "../../images/New Courses/avatar1.png";
-import avatar2 from "../../images/New Courses/avatar2.png";
+// import avatar2 from "../../images/New Courses/avatar2.png";
 import avatar3 from "../../images/New Courses/avatar3.png";
 import avatar4 from "../../images/New Courses/avatar4.png";
 
