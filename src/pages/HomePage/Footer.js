@@ -21,7 +21,7 @@ const Footer = () => {
         }
       `}</style>
       <div id="footer-spacer">""</div>
-      <footer className="container-fluid fixed-bottom bg-white">
+      <footer className="container-fluid bg-white">
         <div className="container">
           <hr />
           <div className="d-flex flex-column flex-md-row align-items-md-end mt-4 mb-5">

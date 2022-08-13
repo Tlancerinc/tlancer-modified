@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import parentHero from "../../../images/Parents/parent_hero.webp";
 import JoinRightWrapper from "../../JoinPages/JoinRightWrapper";
 const ParentHero = () => {
-  const submitHandler = (e) => {
-    console.log("button clicked :)");
-  };
+  
   return (
     <>
       <style>{`
