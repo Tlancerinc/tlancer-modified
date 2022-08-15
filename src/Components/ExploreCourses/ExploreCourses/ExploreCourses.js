@@ -1,5 +1,5 @@
 import data, { data2 } from "./CoursesData";
-const ExploreCourses = () => {
+const ExploreCourses = (props) => {
   const courses = data.map((course, index) => {
     return (
       <div
@@ -48,6 +48,7 @@ const ExploreCourses = () => {
         }
         `}</style>
       <section id="explore-courses-section" className="container-fluid">
+      <div id={props.id}></div>
         <div className="container pb-5 mb-5 px-0">
           <h2
             id="explore-courses-heading"

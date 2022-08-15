@@ -1,6 +1,10 @@
 import tutors from "../../images/tutors.webp";
 import logoTutors from "../../images/logoTutors.svg";
-const Tutors = () => {
+import {Link} from "react-router-dom"
+import { useContext } from "react";
+import AuthContext from "../../store/auth-context";
+const Tutors = (props) => {
+  const authCTX = useContext(AuthContext);
   const check = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +81,8 @@ const Tutors = () => {
 
         }
     `}</style>
-      <section id="tutors-section" className="container-fluid p-md-5 mb-5">
+    {!authCTX.isLoggedIn && (<section id="tutors-section" className="container-fluid p-md-5 mb-5">
+      <div id={props.id}></div>
         <div
           id="tutors-container"
           className="container d-flex flex-column-reverse flex-md-row justify-content-center"
@@ -117,9 +122,16 @@ const Tutors = () => {
                 lectus at.
               </li>
             </ul>
-            <button className="btn btn-lg cta-btn px-md-5 mt-4 mx-auto mb-5">
-              Sign Up as a tutor
-            </button>
+            
+                  <li className="nav-btn-container">
+                    <Link
+                      to="/join"
+                      className="btn btn-lg cta-btn"
+                    >
+                      Sign Up as a Tutor
+                    </Link>
+                  </li>
+              
           </div>
           <div id="tutor-image-container" className="col col-md-6">
             <img
@@ -131,7 +143,7 @@ const Tutors = () => {
             />
           </div>
         </div>
-      </section>
+      </section>)}
     </>
   );
 };

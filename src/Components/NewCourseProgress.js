@@ -1,7 +1,9 @@
+
 import greenBall from "../images/Tutors/greenBall.png";
 import greyBall from "../images/Tutors/greyBall.png";
 export const NewCourseProgress = (props) => {
-  console.log("current Progress for new course: " + props.current);
+
+  console.log("course progress ran")
   return (
     <>
       <style>{`

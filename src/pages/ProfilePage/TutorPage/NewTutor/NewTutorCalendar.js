@@ -1,4 +1,10 @@
+import { useState } from "react";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
 const NewTutorCalendar = () => {
+  const [date, setDate] = useState(new Date());
+  console.log("date: " + date )
+  
   return (
     <>
       <style>{`
@@ -22,14 +28,102 @@ const NewTutorCalendar = () => {
             height: 300px;
             border: 1px solid var(--dark-blue);
         }
+
+        
+
+
+        /* React Calendar Custom Properties Start*/
+
+
+        .react-calendar__tile {
+          height: 100%;
+        }
+
+        .react-calendar__tile--active {
+          background: var(--active-link);
+        }
+
+        .react-calendar__tile react-calendar__month-view__days__day {
+          flex: 0 0 1 !important;
+        }
+
+        .react-calendar__tile--range,
+        .react-calendar__tile--rangeStart,
+        .react-calendar__tile--rangeEnd,
+        .react-calendar__tile--rangeBothEnds {
+          background: rgba(14, 190, 106, .9) !important;
+        }
+
+        .react-calendar__month-view__days {
+          width: 100%;
+        }
+
+        .react-calendar__navigation__label {
+          font-size: 1.5rem;
+        }
+
+        .react-calendar__viewContainer {
+          width: 100%;
+        }
+
+        .react-calendar {
+          width: 100vw;
+          padding: 2rem;
+          border: none;
+          margin: 0 auto;
+          font-family: 'Ubuntu', san-serif;
+        }
+
+        .react-calendar button {
+          border-radius: 30px;
+          border: 1px solid #D1D5DB;
+          padding: 1.5rem .75rem;
+          transition: .1s ease-in;
+          margin-bottom: .5rem;
+        }
+
+        .react-calendar__navigation button {
+          padding: 0;
+        }
+
+        .react-calendar__month-view__weekdays {
+          margin-bottom: 2rem;
+        }
+
+        .react-calendar__month-view__weekdays__weekday abbr[title] {
+          text-decoration: none !important;
+        }
+
+        .react-calendar__month-view__days__day--neighboringMonth {
+          background: rgba(100, 100, 100, 0.1);
+        }
+
+        .react-calendar__navigation>* {
+          border: none !important;
+        }
+
+        button:hover,
+        button:focus {
+          font-weight: bold;
+          background: rgba(14, 190, 106, .8) !important;
+          color: white;
+        }
+
+        @media (max-width: 600px) {
+          .react-calendar {
+            padding: 0rem;
+          }
+        }
+
+        /* React Calendar Custom Properties End*/
+
+        
       `}</style>
       <section id="new-tutor-calendar-section" className="container-fluid py-5">
         <div className="container d-flex flex-column flex-lg-row align-items-center">
           <div className="col col-lg-7">
-            <h2 className="">Course calendar</h2>
-            <div className="temp-cal d-flex align-items-center justify-content-center my-5 w-100 me-lg-5 text-center">
-              <p className="h3">Calendly API will be used here for calendar</p>
-            </div>
+            <h2 className="">Course calendar</h2>           
+              <Calendar onChange={setDate} value={date}/>           
           </div>
           <div className="col col-lg-5 ms-lg-5">
             <div className="d-flex flex-column flex-lg-row my-5">

@@ -62,9 +62,9 @@ export const AuthContextProvider = (props) => {
     setAccount: accountHandler,
   };
 
-  console.log(
-    "current token value: " + token + " current account type: " + accountType
-  );
+  // console.log(
+  //   "current token value: " + token + " current account type: " + accountType
+  // );
 
   return (
     <AuthContext.Provider value={contextValue}>

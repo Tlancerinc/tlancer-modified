@@ -1,9 +1,9 @@
 import CourseCard from "./CourseCard";
-import adobe from "../../../images/adobe.png";
-import dataAnalytics from "../../../images/dataAnalytics.png";
-import figma from "../../../images/figma.png";
-import python from "../../../images/python.png";
-const PopularCourses = () => {
+import adobe from "../../images/adobe.png";
+import dataAnalytics from "../../images/dataAnalytics.png";
+import figma from "../../images/figma.png";
+import python from "../../images/python.png";
+const PopularCourses = (props) => {
   return (
     <>
       <style>{`
@@ -29,7 +29,8 @@ const PopularCourses = () => {
               }
             }
             `}</style>
-      <section id="popular-courses-section my-5">
+      <section id='popular-courses-section'>
+      <div id={props.id}></div>
         <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between mt-5 my-md-5">
           <h2 className="h4 fw-bold pb-4">Popular Courses</h2>
           <button className="more-courses-btn h5">

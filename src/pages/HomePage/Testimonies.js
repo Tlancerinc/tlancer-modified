@@ -1,4 +1,4 @@
-const Testimonies = () => {
+const Testimonies = (props) => {
   return (
     <>
       <style>{`   
@@ -64,6 +64,7 @@ const Testimonies = () => {
       }
       `}</style>
       <section id="testimonials" className="container-fluid bg-white my-5">
+      <div id={props.id}></div>
         <div id="testimonials-target" className="link-target"></div>
         <div className="container p-md-5 bg-white">
           {/* ______ Top Row */}

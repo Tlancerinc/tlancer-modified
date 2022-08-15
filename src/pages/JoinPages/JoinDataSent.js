@@ -53,7 +53,7 @@ const JoinDataSent = (props) => {
         } else {
           setIsValid(false);
           setIsLoading(false);
-          console.log("not valid values: " + data.data);
+          console.log("not valid values: ", data.data);
         }
         console.log("response data: " + JSON.stringify(data));
         console.log(data.data.verified);

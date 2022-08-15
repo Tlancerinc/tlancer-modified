@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
 import { NewCourseProgress } from "../../../../Components/NewCourseProgress";
+import {  useState } from "react";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
 const NewTutorCourseCalendar = () => {
+  const [date, setDate] = useState(new Date());
+  let selectedDates = []
+  const dateHandler = (e) => {
+    setDate(e);
+    selectedDates = [...selectedDates,e.toDateString()]
+    console.log("E: " + e.toDateString())
+  }
+  
+  console.log("selecteDates: " + selectedDates)
+  console.log("course calander page ran " + date)
   return (
     <>
       <style>{`
@@ -21,6 +34,91 @@ const NewTutorCourseCalendar = () => {
           color: var(--product-dark-blue);
         }
 
+        /* React Calendar Custom Properties Start*/
+
+
+.react-calendar__tile {
+  height: 100%;
+}
+
+.react-calendar__tile--active {
+  background: var(--active-link);
+}
+
+.react-calendar__tile react-calendar__month-view__days__day {
+  flex: 0 0 1 !important;
+}
+
+.react-calendar__tile--range,
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd,
+.react-calendar__tile--rangeBothEnds {
+  background: rgba(14, 190, 106, .9) !important;
+}
+
+.react-calendar__month-view__days {
+  width: 100%;
+}
+
+.react-calendar__navigation__label {
+  font-size: 1.5rem;
+}
+
+.react-calendar__viewContainer {
+  width: 100%;
+}
+
+.react-calendar {
+  width: 100vw;
+  padding: 2rem;
+  border: none;
+  margin: 0 auto;
+  font-family: 'Ubuntu', san-serif;
+}
+
+.react-calendar button {
+  border-radius: 30px;
+  border: 1px solid #D1D5DB;
+  padding: 1.5rem .75rem;
+  transition: .1s ease-in;
+  margin-bottom: .5rem;
+}
+
+.react-calendar__navigation button {
+  padding: 0;
+}
+
+.react-calendar__month-view__weekdays {
+  margin-bottom: 2rem;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr[title] {
+  text-decoration: none !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  background: rgba(100, 100, 100, 0.1);
+}
+
+.react-calendar__navigation>* {
+  border: none !important;
+}
+
+button:hover,
+button:focus {
+  font-weight: bold;
+  background: rgba(14, 190, 106, .8) !important;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .react-calendar {
+    padding: 0rem;
+  }
+}
+
+/* React Calendar Custom Properties End*/
+
         
       `}</style>
       <section
@@ -29,9 +127,9 @@ const NewTutorCourseCalendar = () => {
       >
         <div className="container d-flex flex-column flex-md-row">
           <NewCourseProgress current={4} />
-          <form className="col col-md-8 ms-auto">
-            <h1>New Course Calendar goes here.</h1>
-            <Link to={"/tutor/course-pricing"}>
+          <div className="col col-md-8 ms-md-auto">
+          <Calendar onChange={e=>dateHandler(e)} value={date} />
+          <Link to={"/tutor/course-pricing"}>
               <button className="btn-registration btn btn-lg my-5">
                 Next{" "}
                 <svg
@@ -50,7 +148,8 @@ const NewTutorCourseCalendar = () => {
                 </svg>
               </button>
             </Link>
-          </form>
+          </div>
+          
         </div>
       </section>
     </>

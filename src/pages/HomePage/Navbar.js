@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,  } from "react-router-dom";
 import { useContext } from "react";
-import CustomLink from "./CustomLink";
+// import CustomLink from "./CustomLink";
 import logo from "../../images/logo.webp";
 import AuthContext from "../../store/auth-context";
 const Navbar = () => {
@@ -8,6 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const authCTX = useContext(AuthContext);
   console.log("authCTX value: " + JSON.stringify(authCTX));
+  
   const languageBtn = (
     <li id="lang-btn-list-item">
       <button className="btn btn-lang mx-auto my-auto ms-lg-4 d-none">
@@ -181,16 +182,12 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse" id="navbar">
               <ul className="navbar-nav m-auto mb-2 mb-lg-0 text-center">
-                <CustomLink to="/">Home</CustomLink>
-                <CustomLink to="/student">Student</CustomLink>
-                <CustomLink to="/tutor">Tutor</CustomLink>
-                <CustomLink to="/parent">Parent</CustomLink>
-                <li className="nav-item">
-                  <span className="nav-link text-nowrap">Why Us?</span>
-                </li>
-                <li className="nav-item">
-                  <span className="nav-link text-nowrap">Reviews</span>
-                </li>
+                <li className="nav-item"><a className={"nav-link text-nowrap"} href="#Home">Home</a></li>
+                <li className="nav-item"><a className={"nav-link text-nowrap"} href="#PopularCourses">Popular</a></li>                
+                <li className="nav-item"><a className={"nav-link text-nowrap"} href="#CourseLibrary">Explore</a></li>
+                <li className="nav-item"><a className={"nav-link text-nowrap"} href="#Tutor">Tutor</a></li>
+                <li className="nav-item"><a className={"nav-link text-nowrap"} href="#Testimonials">Testimonials</a></li>
+               
 
                 {authCTX.isLoggedIn && (
                   <li className="nav-btn-container">
