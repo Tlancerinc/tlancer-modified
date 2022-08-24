@@ -29,7 +29,7 @@ const CourseEnrollmentHeader = () => {
         }
         
     `}</style>
-      <header className="contianer-fluid">
+      <header className="contianer-fluid mb-5">
         <nav className="navbar px-3 navbar-expand-lg navbar-light bg-white fixed-top w-100">
           <div className="container mt-2 mx-auto px-0">
             <div className="d-flex flex-row-reverse align-items-center w-100">

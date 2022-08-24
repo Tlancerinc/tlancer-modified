@@ -1,7 +1,12 @@
-import React,{useState, useEffect} from 'react';
+import {useState} from 'react';
 import charmDown from "../../images/courses/chevron-down.png";
 
 const CourseEnrollmentSelfService = (props) => {
+  const [entry, setEntry] = useState("");
+  const [courseEntry, setCourseEntry] = useState("");
+  
+  console.log("entry: " + entry);
+  console.log("courseEntry: " + courseEntry);
   return (
     <>
       <style>{`
@@ -58,13 +63,17 @@ const CourseEnrollmentSelfService = (props) => {
     .arrow-container{
       margin-left:160px;
     }
+    .top-margin-container{
+      margin-top:130px;
+    }
+    
    
     `}</style>
-      <section id="parent-section" className="container-fluid p-5">
+      <section id="parent-section" className="container-fluid p-5  mb-5 top-margin-container">
         
 
-        <div className="container">
-          <h2 className="fw-bold h2 heading-container text-style">
+        <div className="container  mt-5 mb-5">
+          <h2 className="fw-bold h2 heading-container text-style  mb-5">
             Course enrollment
           </h2>
        
@@ -95,44 +104,55 @@ const CourseEnrollmentSelfService = (props) => {
           <div className="dist-from-div">
 
             <p className="heading-container">Select Class Type</p>
-            <div class="dropdown mb-5 ">
-              <a class="btn  dropdown-container text-color-container border-container" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Online class  
-                <img
-                  className=" chevDown-container"
-                  src={charmDown}
-                  alt="Tlancer"
-                  width={"20"}
-                  height={"20"}
-                  
-                />
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-container" href="#">Action</a></li>
-                <li><a class="dropdown-item dropdown-container" href="#">Another action</a></li>
-                <li><a class="dropdown-item dropdown-container" href="#">Something else here</a></li>
-              </ul>
+            <div class="dropdown mb-4 ">
+              
+              <form>
+              <select
+                onChange={(e) => {
+                  setEntry(e.target.value);
+                }}
+                id="class-type"
+                defaultValue={"DEFAULT"}
+                className="form-select  my-4"
+              >
+                <option value="DEFAULT" disabled className="my-4">
+                  Select Class Type
+                </option>
+                <option value="online class" className="my-4">
+                  Online Class
+                </option>
+                
+                
+              </select>             
+            </form>
+
             </div>
 
 
             <p className="heading-container">Course Type</p>
             <div class="dropdown mb-5 ">
-              <a class="btn  dropdown-container text-color-container border-container heading-container" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Grouped 
-                <img
-                  className=" chevDown-container"
-                  src={charmDown}
-                  alt="Tlancer"
-                  width={"20"}
-                  height={"20"}
-                  
-                />
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-container heading-container" href="#">Action</a></li>
-                <li><a class="dropdown-item dropdown-container heading-container" href="#">Another action</a></li>
-                <li><a class="dropdown-item dropdown-container heading-container" href="#">Something else here</a></li>
-              </ul>
+              <form>
+              <select
+                onChange={(e) => {
+                  setCourseEntry(e.target.value);
+                }}
+                id="course-type"
+                defaultValue={"DEFAULT"}
+                className="form-select  my-4"
+              >
+                <option value="DEFAULT" disabled className="my-4">
+                  Select Course Type
+                </option>
+                <option value="grouped" className="my-4">
+                  Grouped
+                </option>
+                
+                
+              </select>
+
+              
+            </form>
+            
             </div>
 
             <button  className="btn-registration btn btn-lg button-container text-left">
